@@ -22,7 +22,7 @@ const Signup = (props) => {
       return setData({
         ...data,
         error: {
-          cPassword: "Password doesn't match",
+          cPassword: "Please enter same password as above",
           password: "Password doesn't match",
         },
       });
