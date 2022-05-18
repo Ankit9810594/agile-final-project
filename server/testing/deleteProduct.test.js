@@ -11,12 +11,8 @@ afterAll(async()=>{
     await mongoose.connection.close();
 })
 
-// product update
-it('to test update', async()=>{
-    return product.findOneAndUpdate({_id: Object('62dfc2f77b07a74ed463a405')},
-    {$set: {pName: "TShirt"}})
-    .then((pn)=>{
-        expect(pn.pName).toEqual('Shirt')
-    });
-    
+// product delete
+it('to test delete', async()=>{
+    const status = await product.findOneAndDelete({_id:Object('62e4db9955b7c40d9cbba20b')})
+    expect(status===1);
 });
