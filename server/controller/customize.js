@@ -20,7 +20,7 @@ class Customize {
   async uploadSlideImage(req, res) {
     let image = req.file.filename;
     if (!image) {
-      return res.json({ error: "All field required" });
+      return res.json({ error: "Complete all fields" });
     }
     try {
       let newCustomzie = new customizeModel({
@@ -38,7 +38,7 @@ class Customize {
   async deleteSlideImage(req, res) {
     let { id } = req.body;
     if (!id) {
-      return res.json({ error: "All field required" });
+      return res.json({ error: "Complete all fields" });
     } else {
       try {
         let deletedSlideImage = await customizeModel.findById(id);
