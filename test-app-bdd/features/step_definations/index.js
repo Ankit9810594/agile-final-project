@@ -7,7 +7,7 @@ Given("Testing functionality of register", { timeout: 30000 }, async function ()
   let driver = await new Builder().forBrowser("chrome").build();
   await driver.get("http://localhost:3000/signup");
   await driver.findElement(By.id("name")).sendKeys("Abhishek");
-  await driver.findElement(By.id("email")).sendKeys("abhishek@gmail.com");
+  await driver.findElement(By.id("email")).sendKeys("Chhetriabhishek164@gmail.com");
   await driver.findElement(By.id("password")).sendKeys("abhishek1234");
   await driver.findElement(By.id("cpassword")).sendKeys("abhishek1234");
 
@@ -18,10 +18,10 @@ Given("Testing functionality of register", { timeout: 30000 }, async function ()
   expect(await driver.wait(until.elementLocated(By.id("loginForm"))));
   // await driver.quit();
 });
-Given("Test login functionality", { timeout: 30000 }, async function () {
+Given("Testing Login functionality", { timeout: 30000 }, async function () {
   let driver = await new Builder().forBrowser("chrome").build();
   await driver.get("http://localhost:3000/");
-  await driver.findElement(By.id("email")).sendKeys("abhishek@gmail.com");
+  await driver.findElement(By.id("email")).sendKeys("chhetriabhishek164@gmail.com");
   await driver.findElement(By.id("password")).sendKeys("abhishek1234");
   await driver.sleep(delay);
   await driver.findElement(By.id("loginBtn")).click();
