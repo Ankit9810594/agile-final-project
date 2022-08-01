@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { Fragment, useState, useContext } from "react";
 import { loginReq } from "./fetchApi";
 import { LayoutContext } from "../index";
