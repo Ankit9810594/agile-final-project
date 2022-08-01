@@ -13,6 +13,6 @@ afterAll(async()=>{
 
 // product delete
 it('to test delete', async()=>{
-    const status = await product.findOneAndDelete({_id:Object('')})
+    const status = await product.findOneAndDelete({_id:Object('62dfc2f77b07a74ed463a405')})
     expect(status===1);
 });
